@@ -1,9 +1,8 @@
 let listaDeNumerosSorteados = [];
-let numeroLimite = 10;
+let numeroLimite = 100;
 let numeroSecreto = gerarNumeroAleatorio();
 let tentativas = 1;
 
-<<<<<<< HEAD
 function exibirTextoNaTela(tag, texto) {
     let campo = document.querySelector(tag);
     campo.innerHTML = texto;
@@ -12,7 +11,7 @@ function exibirTextoNaTela(tag, texto) {
 
 function exibirMensagemInicial() {
     exibirTextoNaTela('h1', 'Jogo do número secreto');
-    exibirTextoNaTela('p', 'Escolha um número entre 1 e 10');
+    exibirTextoNaTela('p', 'Escolha um número entre 1 e 100');
 }
 
 exibirMensagemInicial();
@@ -45,7 +44,7 @@ function exibirTextoNaTela(tag, texto) {
 }
 function exibirMensagemInicial(){ 
     exibirTextoNaTela('h1', 'Jogo do número secreto');
-    exibirTextoNaTela('p', 'Escolha um número entre 1 e 10');
+    exibirTextoNaTela('p', 'Escolha um número entre 1 e 100');
 }
 exibirMensagemInicial()
 
@@ -70,59 +69,43 @@ function verificarChute()  {
     } 
 }
 
-
->>>>>>> 7b9352632e9430e177af07e6c4dba83db182ea9e
 function gerarNumeroAleatorio() {
     let numeroEscolhido = parseInt(Math.random() * numeroLimite + 1);
     let quantidadeDeElementosNaLista = listaDeNumerosSorteados.length;
 
-<<<<<<< HEAD
+
     if (quantidadeDeElementosNaLista == numeroLimite) {
         listaDeNumerosSorteados = [];
     }
     if (listaDeNumerosSorteados.includes(numeroEscolhido)) {
-=======
-    if (quantidadeDeElementosNaLista == 10) {
+
+    if (quantidadeDeElementosNaLista == 100) {
         listaDeNumerosSorteados = [];
     }
     if (listaDeNumerosSorteados.includes(numeroEscolhido)){
->>>>>>> 7b9352632e9430e177af07e6c4dba83db182ea9e
+        
         return gerarNumeroAleatorio();
+        
     } else {
         listaDeNumerosSorteados.push(numeroEscolhido);
         console.log(listaDeNumerosSorteados)
         return numeroEscolhido;
     }
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> 7b9352632e9430e177af07e6c4dba83db182ea9e
+
 function limparCampo() {
     chute = document.querySelector('input');
     chute.value = '';
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> 7b9352632e9430e177af07e6c4dba83db182ea9e
 function reiniciarJogo() {
     numeroSecreto = gerarNumeroAleatorio();
     limparCampo();
     tentativas = 1;
     exibirMensagemInicial();
-<<<<<<< HEAD
+
     document.getElementById('reiniciar').setAttribute('disabled', true)
 }
-
-
-
-
-
-
-
-=======
     document.getElementById('reiniciar').setAttribute('disabled', true);
 }
-{}
->>>>>>> 7b9352632e9430e177af07e6c4dba83db182ea9e
